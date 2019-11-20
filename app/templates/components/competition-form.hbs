@@ -1,32 +1,36 @@
-<div>Complete the following to be in with a chance to win a $10,000</div>
+<div class="form">
+  <div class="heading">Complete the following to be in with a chance to win a $10,000</div>
+  <br>
+  <div>
+    <label>How many components are currently in the design system?</label>
+    <label><input type="radio">5</label>
+    <label><input type="radio">24</label>
+    <label><input type="radio">19</label>
+  </div>
+  <br>
+  <div>
+    <label>Name</label>
+    <input type="text">
+  </div>
+  <br>
+  <div>
+    <label>Email</label>
+    <input type="email">
+  </div>
+  <br>
+  <div>
+    <label>
+      Would you like to be contacted with promotional material?
+      <input type="checkbox" checked>
+    </label>
+  </div>
+  <br>
 
-
-<div>
-  <label>How many components are currently in the design system?</label>
-  <label><input type="radio">5</label>
-  <label><input type="radio">24</label>
-  <label><input type="radio">19</label>
+  <button onclick={{action "showAlert"}}>Enter!</button>
+  <br>
+  <br>
+  <br>
+  {{#if isEntered}}
+    Entered!
+  {{/if}}
 </div>
-
-<div>
-  <label>Name</label>
-  <input type="text">
-</div>
-
-<div>
-  <label>Email</label>
-  <input type="email">
-</div>
-
-<div>
-  <label>
-    Would you like to be contacted with promotional material?
-    <input type="checkbox" checked>
-  </label>
-</div>
-
-<button onclick={{action "showAlert"}}>Enter!</button>
-
-{{#if isEntered}}
-  Entered!
-{{/if}}
