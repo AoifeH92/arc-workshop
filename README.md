@@ -2,6 +2,10 @@
 
 In the ARC workshop we will take a plain html form and replace it with ARC components and styling.
 
+From this:
+
+![Plain Form](plain-form.jpg)
+
 To this:
 
 ![Completed Form](completed-form.jpg)
