@@ -1,32 +1,44 @@
-<div>Complete the following to be in with a chance to win a $10,000</div>
+<div class="{{NS}}--form">
+  <div class="{{NS}}--heading">Complete the following to be in with a chance to win a $10,000!</div>
+  <br>
+  <div>
+    <label>How many components are currently in the design system?</label>
+    {{#ui-radio-button-list selection="5" as |radioButtonList|}}
+      {{radioButtonList.radioButton value="5" label="5"}}
+      {{radioButtonList.radioButton value="24" label="24"}}
+      {{radioButtonList.radioButton value="19" label="19"}}
+    {{/ui-radio-button-list}}
+  </div>
+  <br>
+  <div>
+    <UiTextInput @name="name" @label="Name" @value={{name}} />
+  </div>
+  <br>
+  <div>
+    <UiTextInput @name="email" @label="Email" @type="email" />
+  </div>
+  <br>
+  <div>
+    <label>
+      Would you like to be contacted with promotional material?
+      {{ui-checkbox label="Yes" checked=true}}
+    </label>
+  </div>
+  <br>
 
-
-<div>
-  <label>How many components are currently in the design system?</label>
-  <label><input type="radio">5</label>
-  <label><input type="radio">24</label>
-  <label><input type="radio">19</label>
+  <UiButton @click={{action "showAlert"}}>Enter!</UiButton>
+  <br>
+  <br>
+  <br>
+  {{#if isEntered}}
+    {{#ui-notification
+        style="success"
+        close=true
+        title="Success!"
+        white=false
+        size="sm"}}
+      Entered {{name}}!
+    {{/ui-notification}}
+  {{/if}}
 </div>
 
-<div>
-  <label>Name</label>
-  <input type="text">
-</div>
-
-<div>
-  <label>Email</label>
-  <input type="email">
-</div>
-
-<div>
-  <label>
-    Would you like to be contacted with promotional material?
-    <input type="checkbox" checked>
-  </label>
-</div>
-
-<button onclick={{action "showAlert"}}>Enter!</button>
-
-{{#if isEntered}}
-  Entered!
-{{/if}}

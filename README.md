@@ -1,7 +1,10 @@
 # arc-workshop
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+In the ARC workshop we will take a plain html form and replace it with ARC components and styling.
+
+To this:
+
+![Completed Form](completed-form.jpg)
 
 ## Prerequisites
 
